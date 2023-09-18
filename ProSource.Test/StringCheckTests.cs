@@ -11,9 +11,9 @@ namespace ProSource.Test
         [TestCase("<<><>>")]
         [TestCase("<THIS><IS><CORRECT>")]
         [TestCase("<MAKE><<SOME><GROUPING>>")]
-        public void TestIfIsEnclosedByAngleBracketsPass(string s)
+        public void TestHasMatchingAngleBracketsPass(string s)
         {            
-            Assert.True(StringCheck.IsEnclosedByAngleBrackets(s));
+            Assert.True(StringCheck.HasMatchingAngleBrackets(s));
         }
 
         [TestCase("><")]
@@ -22,9 +22,9 @@ namespace ProSource.Test
         [TestCase("<><><><><><><<>><")]
         [TestCase("<THIS><IS><WRONG>>")]
         [TestCase("<DONT><<CLOSE><GROUPING>")]
-        public void TestIfIsEnclosedByAngleBracketsFail(string s)
+        public void TestHasMatchingAngleBracketsFail(string s)
         {
-            Assert.False(StringCheck.IsEnclosedByAngleBrackets(s));
+            Assert.False(StringCheck.HasMatchingAngleBrackets(s));
         }
     }
 }

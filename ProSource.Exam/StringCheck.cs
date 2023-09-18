@@ -2,7 +2,7 @@
 {
     public static class StringCheck
     {
-        public static bool IsEnclosedByAngleBrackets(string s)
+        public static bool HasMatchingAngleBrackets(string s)
         {
             int[] openingIndexes = GetIndexes(s, '<');
             int[] closingIndexes = GetIndexes(s, '>');
